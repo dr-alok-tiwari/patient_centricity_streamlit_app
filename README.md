@@ -12,6 +12,7 @@ An interactive, no-API learning studio for a 150-minute management-development p
 - Ninety-three-tool medical AI explorer
 - Demo-readiness control room
 - Ten-question assessment
+- Dedicated developer profile covering Dr. Alok Tiwari's research, teaching and healthcare-AI work
 - Fifty-six-page complete handbook in editable DOCX and print-ready PDF
 - Downloadable presentation, facilitator guide, workbook, prompt cards and research matrices
 
@@ -55,4 +56,5 @@ Tool access, pricing, product scope and regulatory status can change. Reopen off
 
 Dr. Alok Tiwari  
 Assistant Professor – Big Data Analytics  
-Goa Institute of Management
+Goa Institute of Management  
+<https://dr-alok-tiwari.github.io/>
