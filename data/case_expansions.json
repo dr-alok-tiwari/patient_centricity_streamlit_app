@@ -1,0 +1,422 @@
+[
+  {
+    "id": 1,
+    "case_context": "A Serbian health system is considering how to scale two AI capabilities embedded in its electronic workflow: chest X-ray classification support and appointment-attendance prediction. The leadership question is not simply whether the models perform well, but whether the surrounding workflow improves access and preserves professional accountability.",
+    "management_dilemma": "Should the organisation scale the models across facilities now, run a controlled extension, or redesign the workflow first?",
+    "narrative": [
+      "Health Center Nis and the MEDIS.NET environment illustrate an operational approach in which AI is placed inside everyday information systems rather than offered as a separate experimental interface.",
+      "The published case reports approximately 92% chest X-ray classification accuracy for the described task and a substantial reduction in appointment non-attendance when predictions were combined with staff action. These are local operational signals, not universal guarantees.",
+      "The patient-centric challenge is to prevent a risk score from becoming an invisible decision. A high predicted no-show probability could trigger supportive outreach, but it could also create stigma, deprioritisation or inequity if staff do not understand the intended use and override rules.",
+      "For imaging, the model can highlight or classify, but a radiologist remains responsible for the report. The management design must make the hand-off, audit trail and escalation route visible."
+    ],
+    "key_facts": [
+      "Operational case and local model validation published in 2025.",
+      "MEDIS.NET described across 25 facilities.",
+      "VGG19-based chest X-ray classification support.",
+      "Appointment-attendance prediction required staff action to create operational value.",
+      "External and local validation remain necessary before transfer to another setting."
+    ],
+    "stakeholders": [
+      "Patients needing timely imaging or appointments",
+      "Radiologists and referring clinicians",
+      "Scheduling and outreach teams",
+      "Health-system leadership, IT, privacy and quality teams",
+      "Communities that may be differently affected by outreach rules"
+    ],
+    "patient_centric_risks": [
+      "False reassurance or missed abnormality if classification is treated as a report.",
+      "Unfair labelling or reduced access for patients predicted to miss appointments.",
+      "Outreach that reveals sensitive information or ignores preferred communication channels.",
+      "Performance drift when the model is transferred to another population or workflow."
+    ],
+    "discussion_questions": [
+      "Which decision must remain visibly human in the imaging and attendance workflows?",
+      "What should staff do—and never do—after a high no-show-risk prediction?",
+      "Which outcomes would demonstrate patient value beyond model accuracy?",
+      "What subgroup and equity checks are required before expansion?",
+      "What error or workflow failure should pause the pilot?"
+    ],
+    "suggested_discussion": [
+      "Scale through a controlled extension, not an automatic enterprise rollout.",
+      "Use attendance risk for supportive outreach, never punitive scheduling or denial of access.",
+      "Measure completed appointments, time-to-care, false alerts, outreach burden, patient preference, subgroup performance and complaints.",
+      "Retain radiologist sign-off and make model output, confidence, override and final report auditable.",
+      "Define stop criteria for clinically meaningful misses, inequity, privacy incidents and unowned alerts."
+    ],
+    "demo_bridge": {
+      "title": "Redesign a prediction-to-action workflow",
+      "tools": "ChatGPT Prompt 8 plus an approved vendor evidence pack",
+      "steps": [
+        "Define intended user, patient population and exact decision.",
+        "Separate reported performance from evidence still required locally.",
+        "Write supportive outreach rules, override and audit requirements.",
+        "Choose patient-value, safety, equity and workload measures.",
+        "Set continue, redesign and stop thresholds."
+      ],
+      "prompt_id": 8,
+      "output": "Vendor/workflow due-diligence table and controlled-pilot decision.",
+      "checkpoint": "Clinical, privacy, equity, IT/security and operational owners approve before deployment."
+    },
+    "assignment": "Draft a one-page pilot charter for appointment outreach that makes patient choice, staff responsibility, equity monitoring and stop criteria explicit."
+  },
+  {
+    "id": 2,
+    "case_context": "Family physicians in Qatar were surveyed about their awareness and perceptions of AI applications in primary care. The case reveals that adoption depends on trust, accountability, confidentiality and patient experience—not awareness alone.",
+    "management_dilemma": "How should a primary-care organisation introduce AI when clinicians see potential value but remain concerned about confidentiality, accountability and patient satisfaction?",
+    "narrative": [
+      "The cross-sectional survey received 102 eligible responses from 724 invited family physicians. It reported that 78.4% were aware of AI and that respondents perceived possible value in clinical, administrative and public-health tasks.",
+      "The same respondents raised concerns about confidentiality, accountability and patient satisfaction. Because this was a perception survey, it cannot establish clinical effectiveness or safety.",
+      "Leadership therefore faces a social and operating-model problem. A product demonstration may increase curiosity but will not answer who remains accountable, what data may be entered, how a patient is informed, or what happens when the tool is wrong.",
+      "A patient-centric introduction should begin with a bounded workflow, visible safeguards, training and a channel for clinicians and patients to report concerns."
+    ],
+    "key_facts": [
+      "2024 cross-sectional perception survey.",
+      "102 eligible responses from 724 invited physicians.",
+      "78.4% reported AI awareness.",
+      "Positive expectations coexisted with confidentiality, accountability and satisfaction concerns.",
+      "The study did not test clinical effectiveness."
+    ],
+    "stakeholders": [
+      "Family physicians and clinical leaders",
+      "Patients and caregivers",
+      "Privacy, information-security and legal teams",
+      "Training and quality-improvement teams",
+      "Technology vendors and service owners"
+    ],
+    "patient_centric_risks": [
+      "Patients may not understand that AI assisted the encounter or communication.",
+      "Clinicians may over-trust or avoid a tool because accountability is unclear.",
+      "Confidential information may enter an unapproved environment.",
+      "Implementation may optimise task speed while reducing conversation quality."
+    ],
+    "discussion_questions": [
+      "What assurance would clinicians need before using a new AI tool?",
+      "What notice, consent or explanation should a patient receive?",
+      "Who owns an incorrect output and its downstream consequences?",
+      "Which first use case is valuable, bounded and reversible?",
+      "How should patient satisfaction and clinician trust be measured?"
+    ],
+    "suggested_discussion": [
+      "Select a low-risk, reviewable workflow such as synthetic training or draft patient education from approved evidence.",
+      "Publish a simple responsibility map covering input, review, release, escalation and audit.",
+      "Train users on limitations, privacy and verification rather than interface navigation alone.",
+      "Collect both patient and clinician feedback; include opt-out and complaint routes where appropriate.",
+      "Treat trust as an outcome to measure, not a communication problem to manage away."
+    ],
+    "demo_bridge": {
+      "title": "Build an AI adoption assurance plan",
+      "tools": "ChatGPT Prompt 6 and the Demo Readiness Checklist",
+      "steps": [
+        "Choose one bounded primary-care workflow.",
+        "Define intended and excluded uses.",
+        "Map notice/consent, minimum data and accountable reviewers.",
+        "Specify trust, experience, time and safety measures.",
+        "Write rollback and stop criteria."
+      ],
+      "prompt_id": 6,
+      "output": "Six-week controlled pilot charter.",
+      "checkpoint": "Clinical governance, privacy, IT/security and service ownership approve the pilot."
+    },
+    "assignment": "Create a one-page assurance statement that a clinician could explain to a patient and a regulator."
+  },
+  {
+    "id": 3,
+    "case_context": "A comparative medical-education study at Chengdu Medical College examined the use of Kimi Chat 2.0 during a liver-cancer case assignment. It suggests efficiency and performance gains while exposing risks to reasoning, originality and interaction.",
+    "management_dilemma": "How can faculty use generative AI to reduce unproductive search time without removing productive struggle and independent reasoning?",
+    "narrative": [
+      "The study involved 79 students in two intact classes: a control group of 40 and an AI group of 39. The AI group used Kimi Chat 2.0 to research and present a liver-cancer case.",
+      "Reported assignment time was 2.6 hours for the AI group versus 5.5 hours for the control group. Final scores were 77.3±4.3 versus 66.5±5.4, case scores 8.7±2.1 versus 6.4±3.5, and teacher questions fell from 35 to 10.",
+      "These findings come from one course and two intact classes; they are educational signals, not clinical outcomes or universal proof that AI improves learning.",
+      "The patient-centric connection is indirect but important: medical education should produce professionals who can notice uncertainty, challenge assumptions and communicate responsibly. Instant answers can weaken those capabilities if the activity is not redesigned."
+    ],
+    "key_facts": [
+      "2025 comparative educational study, n=79.",
+      "Control n=40; AI group n=39.",
+      "Kimi Chat 2.0 used for a liver-cancer case assignment.",
+      "Reported reductions in assignment time and teacher questions, with higher scores.",
+      "Single-course, non-randomised institutional context limits generalisation."
+    ],
+    "stakeholders": [
+      "Students and faculty",
+      "Curriculum and assessment leaders",
+      "Future patients relying on graduates' reasoning",
+      "Academic-integrity and technology teams",
+      "Accreditation and quality-assurance bodies"
+    ],
+    "patient_centric_risks": [
+      "Students may learn polished answer patterns without building diagnostic reasoning.",
+      "Homogeneous AI outputs may reduce originality and alternative viewpoints.",
+      "Fabricated or misapplied evidence may be rewarded when only final presentation quality is graded.",
+      "Reduced faculty dialogue may remove opportunities to expose unsafe assumptions."
+    ],
+    "discussion_questions": [
+      "What part of the assignment should be completed before AI is used?",
+      "How can assessment reward revision and source verification rather than polish?",
+      "What evidence would show that reasoning—not only marks—improved?",
+      "When does saved time become lost learning?",
+      "How should AI assistance be disclosed?"
+    ],
+    "suggested_discussion": [
+      "Require an initial problem representation, hypotheses and uncertainty statement before AI access.",
+      "Use AI as a Socratic challenger that asks for evidence and contradiction rather than revealing the answer immediately.",
+      "Grade source traceability, reasoning change, reflection and oral defence.",
+      "Use different cases or constraints to reduce look-alike submissions.",
+      "Faculty remain responsible for verified content and productive dialogue."
+    ],
+    "demo_bridge": {
+      "title": "Socratic case-based learning",
+      "tools": "ChatGPT Prompt 9",
+      "steps": [
+        "Learner writes a problem representation before prompting.",
+        "AI asks for common, dangerous and alternative hypotheses.",
+        "Learner identifies evidence for/against and missing information.",
+        "AI challenges one assumption and introduces one verified source.",
+        "Learner revises; faculty assesses reasoning with a transparent rubric."
+      ],
+      "prompt_id": 9,
+      "output": "Staged Socratic dialogue, revised reasoning and rubric feedback.",
+      "checkpoint": "Faculty verifies clinical content and preserves learner effort, originality and dialogue."
+    },
+    "assignment": "Redesign one existing medical or pharma training activity so the learner must commit, challenge, verify and revise."
+  },
+  {
+    "id": 4,
+    "case_context": "A Trinity College Dublin workshop used generative tools to make four possible 2035 medical-education futures tangible. Participants then identified capabilities worth preserving across scenarios.",
+    "management_dilemma": "How can an institution use AI-generated futures to support strategy without allowing the tool's framing to determine institutional values?",
+    "narrative": [
+      "The 2024 participatory workshop involved 28 participants. ChatGPT supported scenario narratives, MidJourney produced visuals and Murf.AI supplied narration. Facilitators reviewed and refined all AI outputs.",
+      "Participants worked with four scenarios and converged on capabilities including systems thinking, patient-centredness, continuous learning, participatory health, sustainability and technological adaptability.",
+      "The study was qualitative and single-institution. It included no patient representatives and may have been affected by groupthink or framing. It should not be read as a universally applicable curriculum model.",
+      "The central lesson is that AI can increase the vividness and speed of foresight, while people must choose the values, trade-offs and actions. Patient participation should be designed into future exercises rather than assumed."
+    ],
+    "key_facts": [
+      "One participatory workshop with 28 participants.",
+      "Four 2035 scenarios.",
+      "ChatGPT, MidJourney and Murf.AI used to create reviewed scenario assets.",
+      "Participants identified cross-scenario capabilities.",
+      "No patient representatives and single-institution design limit transferability."
+    ],
+    "stakeholders": [
+      "Students, faculty and curriculum leaders",
+      "Patients and community representatives",
+      "Health-system and pharma partners",
+      "Professional and accreditation bodies",
+      "Technology, sustainability and ethics experts"
+    ],
+    "patient_centric_risks": [
+      "AI framing may privilege technology-led futures over community priorities.",
+      "Patients may be discussed as beneficiaries without participating in design.",
+      "Compelling narratives and visuals can disguise weak assumptions.",
+      "Consensus may reflect groupthink rather than robust disagreement."
+    ],
+    "discussion_questions": [
+      "Which capability remains essential in every plausible future?",
+      "Whose voice is absent from the scenario process?",
+      "Which assumptions came from evidence and which came from AI framing?",
+      "What scenario would make today's strategy unsafe or irrelevant?",
+      "How should patient representatives participate?"
+    ],
+    "suggested_discussion": [
+      "Use multiple scenario prompts and deliberately include adverse or low-technology futures.",
+      "Invite patients/community representatives as co-designers with decision rights.",
+      "Label AI-generated assumptions and require evidence or rationale for each.",
+      "Use anonymous challenge rounds before convergence to reduce groupthink.",
+      "Translate capabilities into measurable curriculum or workforce actions."
+    ],
+    "demo_bridge": {
+      "title": "Create and challenge a 2035 patient-care scenario",
+      "tools": "ChatGPT plus Canva or Gamma",
+      "steps": [
+        "Generate one optimistic, one constrained and one adverse scenario.",
+        "Mark every assumption as evidence-based, value choice or speculation.",
+        "Add a patient/community perspective and an equity consequence.",
+        "Identify capabilities robust across all scenarios.",
+        "Choose one no-regret action for the next 12 months."
+      ],
+      "prompt_id": 10,
+      "output": "Reviewed scenario card and no-regret action.",
+      "checkpoint": "Participants—not the model—choose values, priorities and commitments."
+    },
+    "assignment": "Build a one-page future capability map that includes a patient representative's decision role."
+  },
+  {
+    "id": 5,
+    "case_context": "SepsisLab explored why clinicians ignore or distrust sepsis alerts and how a prototype with trends, uncertainty and what-if exploration could support a more collaborative interaction.",
+    "management_dilemma": "Should a hospital add another alert, redesign the existing decision-support interaction, or pause deployment until information needs and workflow timing are understood?",
+    "narrative": [
+      "The study engaged six experienced US clinicians in discussion of the Epic Sepsis Model and a prototype. Participants considered ranked information needs, trend and uncertainty visualisation, and what-if exploration.",
+      "Clinicians described the redesigned prototype more as a collaborator than a static score. This is a qualitative design insight from a very small sample, not evidence of improved clinical outcomes or safety.",
+      "The case highlights that an alert can fail even when its score is statistically useful. If it arrives after the decision, hides uncertainty, interrupts without actionability, or generates repeated false positives, clinicians learn to override it.",
+      "A patient-centric alert should help before the decision, make change and uncertainty visible, and clarify what information or professional action could reduce risk."
+    ],
+    "key_facts": [
+      "2024 qualitative study and human-AI prototype evaluation.",
+      "Six experienced US clinicians.",
+      "Trend, uncertainty, ranked information needs and what-if simulation examined.",
+      "Collaborator framing emerged from participant feedback.",
+      "Not an outcome, safety or prospective effectiveness trial."
+    ],
+    "stakeholders": [
+      "Patients at risk of sepsis",
+      "Nurses, physicians and rapid-response teams",
+      "EHR/CDS, quality and patient-safety teams",
+      "Data scientists and vendors",
+      "Leadership responsible for alert burden and outcomes"
+    ],
+    "patient_centric_risks": [
+      "False negatives may delay recognition; false positives may create fatigue and unnecessary action.",
+      "Late alerts explain a decision after it was already required.",
+      "A single score may hide trajectory, uncertainty and missing information.",
+      "Unowned alerts can shift responsibility without changing care."
+    ],
+    "discussion_questions": [
+      "Does the alert arrive before the decision?",
+      "What changed and why did the alert appear now?",
+      "What information could reduce uncertainty?",
+      "Who must review, override, escalate and document?",
+      "Which prospective measures and stop criteria are required?"
+    ],
+    "suggested_discussion": [
+      "Begin with the decision and information need, not the existing score interface.",
+      "Show trend, uncertainty, contributing data and missing information.",
+      "Provide an owned escalation and documented override route.",
+      "Measure timeliness, false-positive/negative burden, response, workload, equity and patient outcomes prospectively.",
+      "Do not claim clinical benefit from a usability prototype alone."
+    ],
+    "demo_bridge": {
+      "title": "Redesign an unhelpful alert",
+      "tools": "ChatGPT Prompt 5",
+      "steps": [
+        "Analyse timeliness, burden, uncertainty, explanation and actionability.",
+        "Specify what changed and why the alert appeared.",
+        "List information that could reduce uncertainty.",
+        "Create override, escalation and audit paths.",
+        "Define pilot measures and stop criteria."
+      ],
+      "prompt_id": 5,
+      "output": "Before/after alert specification and prospective pilot measures.",
+      "checkpoint": "Clinical governance approves intended use, thresholds, escalation and monitoring."
+    },
+    "assignment": "Bring one non-identifiable alert from your setting and redesign its decision timing, uncertainty and ownership."
+  },
+  {
+    "id": 6,
+    "case_context": "Ambient documentation tools can return attention to the consultation, but they also create a new workflow for consent, review, omission detection, correction, retention and audit.",
+    "management_dilemma": "Should a five-practice group roll out an ambient scribe broadly after promising time-saving reports, or use a controlled pilot that treats review quality as a new clinical process?",
+    "narrative": [
+      "The supplied implementation dissertation describes a multi-practice deployment with initial resistance, new review work and potential benefits. The programme triangulates this with growing multi-site peer-reviewed observational evidence on ambient documentation.",
+      "Across products and settings, reports suggest potential reductions in after-hours EHR work and documentation burden. Outcomes, adoption maturity, measures and product behaviour vary, so local safety and effectiveness cannot be assumed.",
+      "Ambient capture changes the consultation: patients need an appropriate notice or consent process, clinicians must review drafts, and the organisation must decide retention, data location, access and incident handling.",
+      "The key management insight is that time saved at the keyboard creates a new quality-assurance workflow. A pilot must measure both the returned attention and the errors or omissions that reviewers must catch."
+    ],
+    "key_facts": [
+      "Implementation dissertation plus growing observational health-system evidence.",
+      "Potential reductions in after-hours documentation and burden are reported.",
+      "Product, setting, adoption maturity and outcome measures vary.",
+      "Consent, review, retention and audit are workflow requirements.",
+      "Time saving alone does not establish safety."
+    ],
+    "stakeholders": [
+      "Patients and caregivers in recorded encounters",
+      "Clinicians and designated reviewers",
+      "Health-information management and quality teams",
+      "Privacy, IT/security, procurement and legal teams",
+      "Ambient-scribe vendors and implementation partners"
+    ],
+    "patient_centric_risks": [
+      "Patients may not understand capture, retention or use.",
+      "The draft may omit uncertainty, context, negation or sensitive discussion.",
+      "Reviewers may become automation-biased or rush sign-off.",
+      "Data handling may conflict with policy, contract or patient expectation."
+    ],
+    "discussion_questions": [
+      "What attention does the tool return to the patient?",
+      "What new review work and error types appear?",
+      "Who reviews the reviewer and how are omissions sampled?",
+      "What notice/consent and data-retention model is appropriate?",
+      "Which error would immediately stop the pilot?"
+    ],
+    "suggested_discussion": [
+      "Pilot in a bounded service with explicit exclusions and trained reviewers.",
+      "Use synthetic data before any live encounter and obtain governance approval.",
+      "Sample notes using an error taxonomy that includes hallucination, omission, negation, medicine and follow-up errors.",
+      "Measure clinician time, after-hours work, patient experience, correction burden and safety incidents.",
+      "Publish rollback and stop criteria; make the final signer accountable."
+    ],
+    "demo_bridge": {
+      "title": "Ambient scribe versus structured ChatGPT draft",
+      "tools": "Heidi, Nabla or Abridge demonstration plus ChatGPT Prompts 1 and 6",
+      "steps": [
+        "Label and enter the supplied synthetic consultation.",
+        "Generate a note and patient summary in the specialised tool.",
+        "Run Prompt 1 in ChatGPT with the same transcript.",
+        "Compare omissions, inventions, teach-back and escalation.",
+        "Use Prompt 6 to create a six-week pilot and stop rules."
+      ],
+      "prompt_id": 1,
+      "output": "Reviewed draft comparison and controlled-pilot charter.",
+      "checkpoint": "Clinician/designated reviewer edits and signs; governance owners approve consent, data and audit."
+    },
+    "assignment": "Create an ambient-scribe error taxonomy and a weekly sampling plan for a six-week pilot."
+  },
+  {
+    "id": 7,
+    "case_context": "Explainable AI methods such as heatmaps, attention maps and feature attribution can support scrutiny, but an explanation may be plausible, unstable or clinically irrelevant.",
+    "management_dilemma": "Should a clinical or pharma team accept a medical-AI product because its predictions are accompanied by attractive explanations?",
+    "narrative": [
+      "The 2025 reference chapter discusses explainable-AI applications across imaging, drug discovery and personalised medicine. It illustrates how explanations may support audit, teaching and clinician sense-checking.",
+      "As a narrative reference chapter, it is useful for concepts and examples but does not prove that any particular explanation method improves accuracy, safety or patient outcomes.",
+      "A heatmap can focus attention while still being unstable, sensitive to model changes or unrelated to clinically meaningful evidence. Explanations should therefore be evaluated alongside intended use, validation, subgroup performance and error consequences.",
+      "For patient centricity, explanations must be appropriate to the audience. A technical attribution plot may support professional audit, while a patient needs an honest explanation of what the system did, its uncertainty and who made the final decision."
+    ],
+    "key_facts": [
+      "2025 narrative reference chapter.",
+      "Covers imaging, drug discovery and personalised medicine examples.",
+      "Discusses heatmaps, attention maps and feature attribution.",
+      "Supports explanation and audit concepts.",
+      "Explanation is not evidence of accuracy, benefit, fairness or regulatory approval."
+    ],
+    "stakeholders": [
+      "Patients and caregivers",
+      "Clinicians, radiologists, pathologists and pharmacists",
+      "Medical, safety and regulatory professionals",
+      "Data-science and model-risk teams",
+      "Procurement, governance and vendors"
+    ],
+    "patient_centric_risks": [
+      "A persuasive visual may create false confidence.",
+      "An explanation may not be stable across similar inputs or model versions.",
+      "Technical explanations may be incomprehensible or misleading to patients.",
+      "Teams may overlook subgroup performance, false negatives or weak external validation."
+    ],
+    "discussion_questions": [
+      "Is the explanation clinically meaningful or merely decorative?",
+      "Was the explanation method tested for stability and usefulness?",
+      "What validation population, comparator and subgroup results are available?",
+      "How are false positives and false negatives handled?",
+      "What explanation does a patient need—and who owns the final decision?"
+    ],
+    "suggested_discussion": [
+      "Evaluate explanation as one part of a due-diligence package, not a substitute for performance evidence.",
+      "Ask for intended use, external/local validation, subgroup performance and clinically meaningful error analysis.",
+      "Test stability on similar synthetic examples and compare with expert reasoning.",
+      "Separate professional audit explanations from patient-facing communication.",
+      "Document override, audit, data and regulatory-status questions before a pilot."
+    ],
+    "demo_bridge": {
+      "title": "Explainable-AI vendor evaluation",
+      "tools": "ChatGPT Prompt 8 plus vendor product and validation materials",
+      "steps": [
+        "Extract intended use, user, population and setting.",
+        "Map validation, comparator, false positives/negatives and subgroups.",
+        "Describe the explanation method and its claimed clinical meaning.",
+        "Identify evidence gaps, India applicability and data controls.",
+        "State reasons to pilot and reasons not to pilot."
+      ],
+      "prompt_id": 8,
+      "output": "Auditable vendor-question list and pilot/no-pilot rationale.",
+      "checkpoint": "Clinical, regulatory, privacy, security and procurement reviewers verify original evidence and current status."
+    },
+    "assignment": "Review one medical-AI product page and mark each statement as evidence, marketing claim, unknown or decision requirement."
+  }
+]
