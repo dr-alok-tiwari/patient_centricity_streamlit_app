@@ -91,11 +91,19 @@ h2 { font-size:1.8rem !important; }
 .step-copy { padding-top:.3rem; }
 .source-link { font-size:.8rem; color:var(--blue); overflow-wrap:anywhere; }
 .small { font-size:.8rem; color:var(--muted); }
+.profile-panel { background:linear-gradient(145deg,#ffffff 0%,#eef8f6 100%); border:1px solid #b9dcd7; border-radius:24px; padding:1.25rem; box-shadow:0 12px 32px rgba(8,38,56,.08); }
+.profile-panel h2 { margin:.2rem 0 .35rem; }
+.profile-role { color:var(--teal); font-weight:800; margin-bottom:.7rem; }
+.profile-quote { border-left:5px solid var(--coral); background:var(--blush); border-radius:14px; padding:1rem 1.1rem; font-family:'Source Serif 4',serif; font-size:1.08rem; color:var(--navy); }
+.focus-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.75rem; margin:.75rem 0 1.2rem; }
+.focus-card { background:white; border:1px solid var(--line); border-radius:16px; padding:.9rem; min-height:118px; }
+.focus-card strong { display:block; color:var(--navy); margin-bottom:.25rem; }
+.focus-card span { color:var(--muted); font-size:.82rem; line-height:1.45; }
 .footer { margin-top:2rem; padding-top:1rem; border-top:1px solid var(--line); color:var(--muted); font-size:.78rem; text-align:center; }
 div[data-testid="stDataFrame"] { border:1px solid var(--line); border-radius:16px; overflow:hidden; }
 .stButton > button, .stDownloadButton > button, a[data-testid="stLinkButton"] { border-radius:12px !important; font-weight:700 !important; }
-@media (max-width:900px) { .hero-grid,.metric-row { grid-template-columns:repeat(2,1fr); } .hero h1 { font-size:2.35rem !important; } }
-@media (max-width:600px) { .hero-grid,.metric-row { grid-template-columns:1fr; } .hero { padding:1.5rem; } .timeline-item { grid-template-columns:68px 1fr; } }
+@media (max-width:900px) { .hero-grid,.metric-row { grid-template-columns:repeat(2,1fr); } .focus-grid { grid-template-columns:repeat(2,1fr); } .hero h1 { font-size:2.35rem !important; } }
+@media (max-width:600px) { .hero-grid,.metric-row,.focus-grid { grid-template-columns:1fr; } .hero { padding:1.5rem; } .timeline-item { grid-template-columns:68px 1fr; } }
 </style>
 """
 st.markdown(CSS, unsafe_allow_html=True)
@@ -663,6 +671,146 @@ def page_about() -> None:
     st.markdown('<div class="callout teal"><strong>Programme principle.</strong> AI assists. Professionals decide. Patients remain the purpose.</div>', unsafe_allow_html=True)
 
 
+def page_developer() -> None:
+    hero(
+        "About the developer",
+        "Meet the researcher, educator and builder behind the Patient-Centric Healthcare 5.0 learning studio.",
+        "Research × Education × Implementation",
+    )
+
+    portrait, profile = st.columns([0.32, 0.68], gap="large", vertical_alignment="center")
+    with portrait:
+        st.image(
+            "https://avatars.githubusercontent.com/u/34236103?v=4",
+            caption="Dr. Alok Tiwari",
+            width="stretch",
+        )
+    with profile:
+        st.markdown(
+            """
+            <div class="profile-panel">
+              <span class="tag teal">Healthcare AI</span>
+              <span class="tag blue">Explainable AI</span>
+              <span class="tag gold">MLOps</span>
+              <h2>Dr. Alok Tiwari</h2>
+              <div class="profile-role">Assistant Professor – Big Data Analytics · Goa Institute of Management</div>
+              <p>Dr. Tiwari works at the intersection of machine learning, medical imaging, responsible AI,
+              healthcare analytics and management education. His focus is translating rigorous technical
+              research into systems, decisions and learning experiences that people can use responsibly.</p>
+              <p><strong>PhD, Biomedical Engineering</strong> · IIT (BHU), Varanasi</p>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+        links = st.columns(4)
+        links[0].link_button("Portfolio", "https://dr-alok-tiwari.github.io/", width="stretch")
+        links[1].link_button("GitHub", "https://github.com/dr-alok-tiwari", width="stretch")
+        links[2].link_button("LinkedIn", "https://www.linkedin.com/in/dr-alok-tiwari", width="stretch")
+        links[3].link_button("ORCID", "https://orcid.org/0000-0003-3605-8565", width="stretch")
+
+    st.markdown("## Research-to-practice profile")
+    st.markdown(
+        """
+        His doctoral research examined transfer learning for COVID-19 classification and weakly supervised
+        cardiac MRI segmentation. Today, he designs and delivers analytics, AI and healthcare-focused learning
+        for management students, faculty, executives and practitioners—connecting responsible system design
+        with clinical decision support and real-world organisational action.
+        """
+    )
+    st.markdown(
+        """
+        <div class="focus-grid">
+          <div class="focus-card"><strong>Medical image analysis</strong><span>Deep learning for MRI, chest X-ray and clinical imaging interpretation.</span></div>
+          <div class="focus-card"><strong>Explainable & ethical AI</strong><span>Transparent, accountable and fair systems for clinicians and managers.</span></div>
+          <div class="focus-card"><strong>Applied data science</strong><span>Statistical learning tied to healthcare, business and policy decisions.</span></div>
+          <div class="focus-card"><strong>Learning innovation</strong><span>GenAI and analytics-enabled pedagogy for management education and faculty development.</span></div>
+          <div class="focus-card"><strong>Executive analytics</strong><span>Practitioner programmes that convert analytics into organisational decision value.</span></div>
+          <div class="focus-card"><strong>Production-ready AI</strong><span>Cloud, reproducibility, CI/CD and MLOps from notebook to deployment.</span></div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    education, trajectory = st.columns(2, gap="large")
+    with education:
+        st.markdown("### Academic foundation")
+        st.markdown(
+            """
+            - **PhD · Biomedical Engineering**, IIT (BHU), Varanasi  
+              Transfer learning, cardiac MRI and COVID-19 AI
+            - **MTech · Biomedical Engineering**, NIT Kurukshetra  
+              Signal processing and medical imaging
+            - **BTech · Electronics & Communication**, GBTU, Lucknow  
+              Electronics, communication and digital-systems foundations
+            """
+        )
+    with trajectory:
+        st.markdown("### Professional trajectory")
+        st.markdown(
+            """
+            - **2024–present:** Assistant Professor, Big Data Analytics, Goa Institute of Management
+            - **2023:** Assistant Professor, ATLAS SkillTech University
+            - **2022–2023:** Faculty, Data Engineering & AI, uGDX / INSOFE
+            - **2015–2021:** Doctoral researcher, Biomedical Engineering, IIT (BHU)
+            """
+        )
+
+    st.markdown("## Selected healthcare-AI work")
+    projects = [
+        ("Cardiac MRI segmentation", "A weakly supervised cascaded deep-learning pipeline designed to reduce annotation burden."),
+        ("COVID-19 chest X-ray classification", "Transfer-learning research for respiratory-disease detection from radiographs."),
+        ("Brain stroke detection", "CNN-based ischemic-stroke detection from neuroimaging, presented at ICBME 2019."),
+        ("Arrhythmia detection", "A modified Pan–Tompkins QRS-detection approach for noisy ECG signals."),
+        ("GenAI-enabled teaching frameworks", "FDP and MDP curricula integrating GenAI into pedagogy, assessment and executive decisions."),
+        ("Industry analytics pipelines", "Applied Python, SQL, Spark, Docker and cloud workflows for practitioner learning."),
+    ]
+    project_columns = st.columns(2)
+    for index, (title, description) in enumerate(projects):
+        with project_columns[index % 2]:
+            st.markdown(f'<div class="section-card"><h3>{title}</h3><p>{description}</p></div>', unsafe_allow_html=True)
+
+    st.markdown("## Teaching and executive education")
+    teaching, programmes = st.columns(2, gap="large")
+    with teaching:
+        st.markdown("### From classroom to boardroom")
+        st.markdown(
+            """
+            Dr. Tiwari teaches healthcare analytics, MLOps, sports analytics, logical reasoning,
+            data storytelling and AI-assisted research across PGDM, FPM and professional cohorts.
+            His learning designs connect technical concepts to a concrete managerial or healthcare decision.
+            """
+        )
+        st.markdown(
+            '<div class="profile-quote">“Every technical concept taught to a manager must arrive with a decision they can make, or it is not yet finished.”</div>',
+            unsafe_allow_html=True,
+        )
+    with programmes:
+        st.markdown("### Programme themes")
+        st.markdown(
+            """
+            - Generative AI for executive management
+            - GenAI and pedagogical innovation
+            - Healthcare analytics and responsible AI
+            - AI for railways and applied analytics
+            - Data visualisation and decision-making
+            - Hands-on Python, Power BI, SQL and no-code AI sessions
+            """
+        )
+
+    st.markdown("## Connect and explore")
+    st.markdown(
+        """
+        Open to research collaboration, invited talks, faculty and executive development programmes,
+        and applied AI or healthcare-analytics conversations.
+        """
+    )
+    contact_links = st.columns(3)
+    contact_links[0].link_button("Explore full profile", "https://dr-alok-tiwari.github.io/", width="stretch")
+    contact_links[1].link_button("View publications", "https://dr-alok-tiwari.github.io/#publications", width="stretch")
+    contact_links[2].link_button("Start a conversation", "https://dr-alok-tiwari.github.io/#contact", width="stretch")
+    st.caption("Profile information adapted from Dr. Alok Tiwari's public professional website; visit the profile for current publications, projects and contact details.")
+
+
 PAGES = {
     "Overview": page_overview,
     "60-min Theory": page_theory,
@@ -673,7 +821,8 @@ PAGES = {
     "Demo Readiness": page_readiness,
     "Assessment": page_assessment,
     "Downloads": page_downloads,
-    "About": page_about,
+    "About the Programme": page_about,
+    "About the Developer": page_developer,
 }
 
 
